@@ -1,0 +1,96 @@
+/* HOME PAGE */
+.stats{
+    margin-top: 150px !important;
+}
+.w-90 {
+    width: 90%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-95 {
+    width: 95%;
+}
+.my-m-b {
+    margin-bottom: 70px;
+}
+.my-m-t {
+    margin-top: 70px;
+}
+@media(min-width: 769px) {
+    .stats{
+        margin-top: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-h {
+      font-size: 45px !important;
+    }
+    .my-p {
+        font-size: 18px;
+    }
+    .my-b-hero {
+        margin: auto !important;
+        width: 40% !important;
+    }
+  }
+/* 404 Error */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.number {
+    background: #fff;
+    position: relative;
+    font: 900 30vmin 'Consolas';
+    letter-spacing: 5vmin;
+    text-shadow: 
+        2px -1px 0 #000,
+        4px -2px 0 #1a1a1a,
+        6px -3px 0 #333,
+        8px -4px 0 #4d4d4d,
+        10px -5px 0 #666,
+        12px -6px 0 #808080,
+        14px -7px 0 #999,
+        16px -8px 0 #b3b3b3;
+}
+
+.number::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #673ab7;
+    background-image: 
+        radial-gradient(closest-side at 50% 50%, #ffc107 100%, transparent),
+        radial-gradient(closest-side at 50% 50%, #e91e63 100%, transparent);
+    background-repeat: no-repeat;
+    background-size: 40vmin 40vmin;
+    background-position: -100vmin 20vmin, 100vmin -25vmin;
+    mix-blend-mode: screen;
+    animation: moving 10s linear infinite;
+}
+
+.text {
+    font-family: 'Courgette', cursive;
+    font-size: 4vmin;
+    font-weight: 400;
+}
+
+.text span {
+    font-size: 8vmin;
+}
+
+@keyframes moving {
+    to {
+        background-position: 100vmin 20vmin, -100vmin -25vmin;
+    }
+}
