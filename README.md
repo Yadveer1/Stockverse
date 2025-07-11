@@ -1,3 +1,4 @@
+# THIS PROJECT IS CURRENTLY UNDER DEVELOPMENT
 # Zerodha Clone Frontend
 
 A modern, responsive frontend for a Zerodha-inspired trading and investment platform. Built with React, Vite, and Bootstrap.
