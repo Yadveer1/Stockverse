@@ -1,79 +1,120 @@
-# !! THIS PROJECT IS CURRENTLY UNDER DEVELOPMENT !!
-# Zerodha Clone Frontend
+# StockVerse
 
-A modern, responsive frontend for a Zerodha-inspired trading and investment platform. Built with React, Vite, and Bootstrap.
+A full-stack clone of the Zerodha trading platform, built for educational purposes.  
+This project includes a React frontend (with Vite), a Node.js/Express backend, and MongoDB for data storage.
+
+---
 
 ## Features
 
-- Landing page with hero section, stats, awards, and education
-- Product showcase (Kite, Console, Coin, and partner platforms)
-- Pricing and support pages
-- Signup and account opening flows
-- Responsive design with Bootstrap 5
-- FontAwesome icons for UI enhancement
+- User dashboard with live orders, holdings, and positions
+- Place buy and sell orders for stocks
+- Holdings and positions management
+- Responsive UI using React, Vite, and Bootstrap 5
+- RESTful API with Express and MongoDB
+
+---
 
 ## Tech Stack
 
-- [React 19](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [React Router DOM](https://reactrouter.com/)
-- [FontAwesome](https://fontawesome.com/)
+- **Frontend:** React 19, Vite, Bootstrap 5
+- **Backend:** Node.js, Express, MongoDB (Mongoose)
+- **Other:** FontAwesome, Axios
+
+---
+
+## Project Structure
+
+```
+Zerodha/
+│
+├── backend/         # Express API and MongoDB models
+│   ├── model/       # Mongoose models
+│   ├── schemas/     # Mongoose schemas
+│   ├── utils/       # Utility functions
+│   ├── index.js     # Main server file
+│   └── ...
+│
+├── dashboard/       # Main React frontend (Vite)
+│   ├── src/
+│   ├── public/
+│   └── ...
+│
+├── frontend/        # (Optional) Landing page or marketing site
+│   ├── src/
+│   ├── public/
+│   └── ...
+│
+└── README.md        # This file
+```
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or above recommended)
+- Node.js (v18 or above)
 - npm
+- MongoDB (local or Atlas)
 
-### Installation
+### Backend Setup
 
-1. Clone the repository:
+1. Go to the backend folder:
    ```sh
-   git clone https://github.com/yourusername/zerodha-clone.git
-   cd zerodha-clone/frontend
+   cd backend
    ```
-
 2. Install dependencies:
    ```sh
    npm install
    ```
+3. Create a `.env` file with your MongoDB URI:
+   ```
+   MONGO_URL=mongodb://localhost:27017/zerodha-clone
+   ```
+4. Start the backend server:
+   ```sh
+   npm start
+   ```
 
-### Running the Development Server
+### Frontend Setup
 
-Start the frontend in development mode:
+1. Go to the dashboard folder:
+   ```sh
+   cd dashboard
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend:
+   ```sh
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```sh
-npm run dev
-```
+---
 
-Open your browser and navigate to the URL shown in the terminal (usually [http://localhost:5173](http://localhost:5173)).
+## API Endpoints
 
-### Building for Production
+- `GET /allHoldings` — Get all holdings
+- `GET /allPositions` — Get all positions
+- `GET /allOrders` — Get all orders
+- `POST /newOrder` — Place a new order (buy/sell)
+- `GET /holdingsSummary` — Get holdings summary
 
-To build the frontend for production:
-
-```sh
-npm run build
-```
-
-## Project Structure
-
-- `src/` - React components and pages
-- `public/` - Static assets and CSS
-- `index.html` - Main HTML template
+---
 
 ## Customization
 
 - Update images in `public/assets/images/`
 - Modify styles in `public/CSS.css` or `src/index.css`
-- Adjust routes and navigation in `src/App.jsx` and related files
+- Adjust React components in `src/`
 
-## Backend
-
-This frontend is designed to work with the [Zerodha Clone Backend](../backend). See the backend README for API details and setup.
+---
 
 ## License
 
 This project is for educational purposes only and is not affiliated with Zerodha.
+
+---
